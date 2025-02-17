@@ -1,3 +1,59 @@
-<a href="{% url 'index' %}"><h1>Portfólio</h1></a>
+{% load bootstrap5 %}
 
-{% block content %}{% endblock content %}
+<DOCTYPE html>
+    <html lang="pt-br"
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Portfólio de Bruno Venâncio." />
+        <meta name="keywords" content="portfólio, Portfólio" />
+        <meta name="author" content="Bruno Venâncio"/>
+    
+        <title>Portfólio</title>
+
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+
+    </head>
+
+    <body style="background-color: #121314;">
+        <header class="bg-dark text-white">
+            <div class="navbar navbar-dark bg-dark shadow-sm">
+                <div class="container">
+                  <a href="/" class="navbar-brand d-flex align-items-center">
+                    <strong>Portfólio</strong>
+                  </a>
+                  <div class="text-end">
+                    <a href="https://github.com/brunovenanciodevnutri" role="button" class="btn btn-outline-light me-2">GitHub</a>
+                    <a href="https://www.linkedin.com/in/brunovenanciodevnutri/" role="button" class="btn btn-primary">Linkedin</a>
+                  </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="px-4 py-5 my-5 text-left text-light">
+                <div class="container text-left text-light">
+                    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+                        <div class="feature col">
+                            <p class="display-6 mb-1 text-muted">Developer</p>
+                            <h1>Bruno Venâncio</h1>
+                            <p>Olá, meu nome é Bruno! Sou Desenvolvedor e Nutricionista apaixonado pela tecnologia e esporte. A minha graduação inicial foi em Nutrição pela Universidade Tiradentes, onde tive a oportunidade de compreender a importância do esporte e da saúde, mas ao longo da graduação tive o contato com a programação e descobri uma nova paixão. Tenho experiência com Python e Git e estou sempre em busca de novos desafios para expandir meu conhecimento e exponenciar o meu potencial.<p>
+                            
+                            {% block content %}{% endblock content %}
+                        </div>
+                    </div>
+                    <div>
+                        <a class="btn btn-outline-light btn-lg rounded" href="https://api.whatsapp.com/send/?phone=5579996617303&text=&type=phone_number&app_absent=0" role="button">Entrar em contato</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+    
+    <footer>
+    </footer>
+    
+    </html>

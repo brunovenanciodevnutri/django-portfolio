@@ -1,5 +1,12 @@
+{# O block e endblock servem para estruturar e organizar o site. Exemplo: O footer, vai ficar no final, logo o block footer ficará no fim da base.html #}
+{# Logo, mesmo que você coloque o footer no início do index.html, no site ele aparecerá no final, visto que o block footer está no final no arquivo base.html #}
+
 {% extends 'base.html' %}
 
+{% block header %}
+
+{% endblock header %}
+
 {% block content %}
-    <p>Bem-vindo ao meu Portfólio.</p>
+
 {% endblock content %}
